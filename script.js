@@ -1,4 +1,4 @@
-<script>
+        document.addEventListener('DOMContentLoaded', function() {
         var audio = document.getElementById("myAudio");
         var playBtn = document.getElementById("playBtn");
         
@@ -11,8 +11,9 @@
                 playBtn.textContent = "Play";
             }
         }
+                }
 
-        // Check if autoplay was successful
+
         audio.addEventListener('play', function() {
             playBtn.textContent = "Pause";
         });
@@ -20,4 +21,4 @@
         audio.addEventListener('pause', function() {
             playBtn.textContent = "Play";
         });
-       </script>
+
