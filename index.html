@@ -14,24 +14,35 @@
             <img src="Assets/warzone-logo-white-shadow.png" alt="cod warzone logo">
             <a href="https://www.callofduty.com/content/atvi/callofduty/warzone/web/es/home.html"> Play Now</a>
 
-            <audio id="myAudio">
-           <source src="Assets/Game Setting Battle (bddcb56b19db47c3a3d4972e574d659c).mp3" autoplay loop type="audio/mpeg">
+            <audio id="myAudio" autoplay loop>
+           <source src="Assets/Game Setting Battle (bddcb56b19db47c3a3d4972e574d659c).mp3" type="audio/mpeg">
            Your browser does not support the audio element.
        </audio>
        
-       <button onclick="playAudio()">Play</button>
-       <button onclick="pauseAudio()">Pause</button>
-       
-       <script>
-           var audio = document.getElementById("myAudio");
-           
-           function playAudio() {
-               audio.play();
-           }
-           
-           function pauseAudio() {
-               audio.pause();
-           }
+       <button id="playBtn" class="audio-btn" onclick="toggleAudio()">Pause</button>
+    
+    <script>
+        var audio = document.getElementById("myAudio");
+        var playBtn = document.getElementById("playBtn");
+        
+        function toggleAudio() {
+            if (audio.paused) {
+                audio.play();
+                playBtn.textContent = "Pause";
+            } else {
+                audio.pause();
+                playBtn.textContent = "Play";
+            }
+        }
+
+        // Check if autoplay was successful
+        audio.addEventListener('play', function() {
+            playBtn.textContent = "Pause";
+        });
+
+        audio.addEventListener('pause', function() {
+            playBtn.textContent = "Play";
+        });
        </script>
             
         </div>
