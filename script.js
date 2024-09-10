@@ -1,12 +1,14 @@
      document.addEventListener('DOMContentLoaded', function() {
-        const audio = document.getElementById("myAudio");
-        const playBtn = document.getElementById("playBtn");
+        var audio = document.getElementById("myAudio");
+        var playBtn = document.getElementById("playBtn");
 
           function playAudio() {
+               var audio = document.getElementById('myAudio');
                audio.play();
            }
            
            function pauseAudio() {
+                var audio = document.getElementById('myAudio');
                audio.pause();
            }
         
