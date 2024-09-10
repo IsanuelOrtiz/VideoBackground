@@ -23,7 +23,7 @@
         }
                 }
 
-        playBtn.addEventListener('click', playPauseTrack);
+        playBtn.addEventListener('click', toggleAudio);
 
         playBtn.innerHTML = audio.paused ? "Play" : "Pause";
 
