@@ -1,6 +1,14 @@
      document.addEventListener('DOMContentLoaded', function() {
         const audio = document.getElementById("myAudio");
         const playBtn = document.getElementById("playBtn");
+
+          function playAudio() {
+               audio.play();
+           }
+           
+           function pauseAudio() {
+               audio.pause();
+           }
         
         function toggleAudio() {
             if (audio.paused) {
