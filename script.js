@@ -15,12 +15,13 @@
 
         playBtn.addEventListener('click', toggleAudio);
 
+        playBtn.innerHTML = audio.paused ? "play" : "pause";
 
-        audio.addEventListener('play', function() {
+        /*audio.addEventListener('play', function() {
             playBtn.innerHTML = "Pause";
         });
 
         audio.addEventListener('pause', function() {
             playBtn.innerHTML = "Play";
-        });
+        });*/
 
