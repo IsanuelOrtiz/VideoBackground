@@ -13,6 +13,8 @@
         }
                 }
 
+        playBtn.addEventListener('click', toggleAudio);
+
 
         audio.addEventListener('play', function() {
             playBtn.textContent = "Pause";
