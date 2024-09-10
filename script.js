@@ -5,10 +5,10 @@
         function toggleAudio() {
             if (audio.paused) {
                 audio.play();
-                playBtn.textContent = "Pause";
+                playBtn.innerHTML = "Pause";
             } else {
                 audio.pause();
-                playBtn.textContent = "Play";
+                playBtn.innerHTML = "Play";
             }
         }
                 }
@@ -17,10 +17,10 @@
 
 
         audio.addEventListener('play', function() {
-            playBtn.textContent = "Pause";
+            playBtn.innerHTML = "Pause";
         });
 
         audio.addEventListener('pause', function() {
-            playBtn.textContent = "Play";
+            playBtn.innerHTML = "Play";
         });
 
