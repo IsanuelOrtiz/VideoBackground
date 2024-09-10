@@ -1,37 +1,28 @@
-     document.addEventListener('DOMContentLoaded', function() {
-        var audio = document.getElementById("myAudio");
-        var playBtn = document.getElementById("playBtn");
+document.addEventListener('DOMContentLoaded', function() {
+    var audio = document.getElementById("myAudio");
+    var playBtn = document.getElementById("playBtn");
 
-          function playAudio() {
-               var audio = document.getElementById('myAudio');
-               audio.play();
-           }
-           
-           function pauseAudio() {
-                var audio = document.getElementById('myAudio');
-               audio.pause();
-           }
-        
-        function toggleAudio() {
-            if (audio.paused) {
-                audio.play();
-                playBtn.innerHTML = "Pause";
-            } else {
-                audio.pause();
-                playBtn.innerHTML = "Play";
-            }
-        }
-                }
+    function playAudio() {
+        audio.play();
+    }
 
-        playBtn.addEventListener('click', toggleAudio);
+    function pauseAudio() {
+        audio.pause();
+    }
 
-        playBtn.innerHTML = audio.paused ? "Play" : "Pause";
-
-        /*audio.addEventListener('play', function() {
+    function toggleAudio() {
+        if (audio.paused) {
+            audio.play();
             playBtn.innerHTML = "Pause";
-        });
-
-        audio.addEventListener('pause', function() {
+        } else {
+            audio.pause();
             playBtn.innerHTML = "Play";
-        });*/
+        }
+    }
 
+    // Add event listener for play/pause button
+    playBtn.addEventListener('click', toggleAudio);
+
+    // Set initial button text based on audio state
+    playBtn.innerHTML = audio.paused ? "Play" : "Pause";
+});
