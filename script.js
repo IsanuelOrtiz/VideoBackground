@@ -15,7 +15,7 @@
 
         playBtn.addEventListener('click', playPauseTrack);
 
-        playBtn.innerHTML = audio.paused ? "play" : "pause";
+        playBtn.innerHTML = audio.paused ? "Play" : "Pause";
 
         /*audio.addEventListener('play', function() {
             playBtn.innerHTML = "Pause";
