@@ -24,5 +24,5 @@ document.addEventListener('DOMContentLoaded', function() {
     playBtn.addEventListener('click', toggleAudio);
 
     // Set initial button text based on audio state
-    playBtn.innerHTML = audio.paused ? "Play" : "Pause";
+    playBtn.innerHTML = audio.paused ? "Pause" : "Play";
 });
