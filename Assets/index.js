@@ -5,10 +5,10 @@ document.addEventListener('DOMContentLoaded', function() {
     function toggleAudio() {
         if (audio.paused) {
             audio.play();
-            playBtn.innerHTML = "Pause";
+            playBtn.innerHTML = "⏸️Pause";
         } else {
             audio.pause();
-            playBtn.innerHTML = "Play";
+            playBtn.innerHTML = "▶️Play";
         }
     }
 
