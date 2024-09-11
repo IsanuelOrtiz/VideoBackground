@@ -14,5 +14,5 @@ document.addEventListener('DOMContentLoaded', function() {
 
     playBtn.addEventListener('click', toggleAudio);
 
-    playBtn.innerHTML = audio.paused ? "Pause" : "Play";
+    playBtn.innerHTML = audio.paused ? "⏸️Pause" : "▶️Play";
 });
